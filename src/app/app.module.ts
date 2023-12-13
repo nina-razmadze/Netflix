@@ -24,6 +24,9 @@ import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomeEmailInputComponent } from './features/home/components/home-email-input/home-email-input.component';
+import { PrimaryButtonComponent } from './shared/components/primary-button/primary-button.component';
+import { InfoLineComponent } from './features/home/components/info-line/info-line.component';
+import { QuestionsTableComponent } from './features/home/components/questions-table/questions-table.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { HomeEmailInputComponent } from './features/home/components/home-email-i
     HeaderComponent,
     FooterComponent,
     HomeEmailInputComponent,
+    PrimaryButtonComponent,
+    InfoLineComponent,
+    QuestionsTableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
