@@ -27,6 +27,9 @@ import { HomeEmailInputComponent } from './features/home/components/home-email-i
 import { PrimaryButtonComponent } from './shared/components/primary-button/primary-button.component';
 import { InfoLineComponent } from './features/home/components/info-line/info-line.component';
 import { QuestionsTableComponent } from './features/home/components/questions-table/questions-table.component';
+import { SelectLengBtnComponent } from './shared/components/select-leng-btn/select-leng-btn.component';
+import { AccordionComponent } from './features/home/components/questions-table/accordion/accordion.component';
+import { QuestionComponent } from './features/home/components/questions-table/question/question.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { QuestionsTableComponent } from './features/home/components/questions-ta
     PrimaryButtonComponent,
     InfoLineComponent,
     QuestionsTableComponent,
+    SelectLengBtnComponent,
+    AccordionComponent,
+    QuestionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
