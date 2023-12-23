@@ -1,3 +1,12 @@
+import { HomeEmailInputComponent } from './features/home/components/home-email-input/home-email-input.component';
+import { SelectLengBtnComponent } from './shared/components/select-leng-btn/select-leng-btn.component';
+import { PrimaryButtonComponent } from './shared/components/primary-button/primary-button.component';
+import { QuestionsTableComponent } from './features/home/components/questions-table/questions-table.component';
+import { AccordionComponent } from './features/home/components/questions-table/accordion/accordion.component';
+import { QuestionComponent } from './features/home/components/questions-table/question/question.component';
+import { InfoLineComponent } from './features/home/components/info-line/info-line.component';
+import { AuthenticationModule } from './features/authentication/authentication.module';
+
 import { UserProfileComponent } from './features/user-profile/user-profile.component';
 import { InterceptorsComponent } from './core/interceptors/interceptors.component';
 
@@ -18,18 +27,15 @@ import { SharedComponent } from './shared/shared.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+
 import { CoreComponent } from './core/core.component';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeEmailInputComponent } from './features/home/components/home-email-input/home-email-input.component';
-import { PrimaryButtonComponent } from './shared/components/primary-button/primary-button.component';
-import { InfoLineComponent } from './features/home/components/info-line/info-line.component';
-import { QuestionsTableComponent } from './features/home/components/questions-table/questions-table.component';
-import { SelectLengBtnComponent } from './shared/components/select-leng-btn/select-leng-btn.component';
-import { AccordionComponent } from './features/home/components/questions-table/accordion/accordion.component';
-import { QuestionComponent } from './features/home/components/questions-table/question/question.component';
+
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,16 +53,22 @@ import { QuestionComponent } from './features/home/components/questions-table/qu
     HomeComponent,
     UserProfileComponent,
     HeaderComponent,
-    FooterComponent,
     HomeEmailInputComponent,
     PrimaryButtonComponent,
     InfoLineComponent,
     QuestionsTableComponent,
-    SelectLengBtnComponent,
     AccordionComponent,
     QuestionComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    AuthenticationModule,
+    SharedModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

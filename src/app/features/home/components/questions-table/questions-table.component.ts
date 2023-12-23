@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Qustion } from '../../../../core/models/question.model';
-import { ViewChild } from '@angular/core';
+
 @Component({
   selector: 'app-questions-table',
   templateUrl: './questions-table.component.html',

@@ -1,11 +1,11 @@
-<form class="flex items-center">
+<form class="flex items-center" (ngSubmit)="onSubmit()" #email="ngForm">
     <label for="simple-search" class="sr-only">Search</label>
     <div class="relative w-full">
-        <input type="text"
+        <input type="text" name="email"
             class="bg-transparent border text-white text-sm rounded-md block w-full ps-10 py-4 px-6 focus:border-green-400 focus:outline-none "
-            placeholder="Email address" required>
+            placeholder="Email address" required ngModel email>
     </div>
-    <button type="submit"
+    <button type="submit" routerLink="/home/login"
         class="inline-flex ml-2 items-center py-[11px] px-[60px] text-2xl font-medium text-white bg-red-600 rounded-md flex-shrink-0">
         Get Started
     </button>

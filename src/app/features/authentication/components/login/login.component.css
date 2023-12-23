@@ -1,0 +1,18 @@
+.bg-image-section {
+  position: relative;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/62b66ae8-a3b9-484d-ac2a-5163474e2554/GE-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  background-size: cover;
+}
+
+.bg-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
