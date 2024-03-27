@@ -5,8 +5,9 @@
             class="bg-transparent border text-white text-sm rounded-md block w-full ps-10 py-4 px-6 focus:border-green-400 focus:outline-none "
             placeholder="Email address" required ngModel email>
     </div>
-    <button type="submit" routerLink="/home/login"
+    <button type="submit" [disabled]="isButtonDisabled"
         class="inline-flex ml-2 items-center py-[11px] px-[60px] text-2xl font-medium text-white bg-red-600 rounded-md flex-shrink-0">
         Get Started
     </button>
+
 </form>

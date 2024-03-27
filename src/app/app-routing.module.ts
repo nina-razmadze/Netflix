@@ -4,15 +4,21 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 
-import { LoginComponent } from './features/authentication/components/login/login.component';
+import { LoginComponent } from './features/authentication/views/login/login.component';
+import { RegisterComponent } from './features/authentication/views/signup/signup.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'home',
-    children: [{ path: 'login', component: LoginComponent }],
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+    ],
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

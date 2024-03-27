@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { EmailService } from '../../../../core/services/email.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-email-input',
   templateUrl: './home-email-input.component.html',
@@ -8,8 +9,19 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeEmailInputComponent {
   @ViewChild('email') email: NgForm;
+  userEmail = '';
+  isButtonDisabled = false;
+
+  constructor(private emailService: EmailService, private router: Router) {}
 
   onSubmit() {
-    this.email.reset();
+    if (this.email.valid) {
+      this.emailService.setEmail(this.userEmail);
+      this.userEmail = this.email.value;
+      console.log('emitted', this.userEmail);
+      this.router.navigate(['/home/register']);
+    } else {
+      this.isButtonDisabled = true;
+    }
   }
 }

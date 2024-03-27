@@ -1,20 +1,29 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
-import { FooterComponent } from '../../shared/components/footer/footer.component';
-import { SharedModule } from '../../shared/shared.module';
-import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
-import { AuthFooterComponent } from './components/auth-footer/auth-footer.component';
+
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+import { ViewsComponent } from './views/views.component';
+import { SharedModule } from '../../shared/shared.module';
+
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/signup/signup.component';
+
+import { loginFooterComponent } from './components/login-footer/login-footer.component';
+import { SuccessAlertComponent } from './components/success-alert/success-alert.component';
+import { SignupFooterComponent } from './components/signup-footer/signup-footer.component';
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
-    AuthHeaderComponent,
-    AuthFooterComponent,
+    loginFooterComponent,
+    ViewsComponent,
+    SuccessAlertComponent,
+    SignupFooterComponent,
   ],
-  imports: [CommonModule, SharedModule, FormsModule],
+  imports: [CommonModule, FormsModule, SharedModule],
+  providers: [],
+  exports: [CommonModule],
 })
 export class AuthenticationModule {}

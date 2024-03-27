@@ -7,17 +7,14 @@ import { QuestionComponent } from './features/home/components/questions-table/qu
 import { InfoLineComponent } from './features/home/components/info-line/info-line.component';
 import { AuthenticationModule } from './features/authentication/authentication.module';
 
-import { UserProfileComponent } from './features/user-profile/user-profile.component';
 import { InterceptorsComponent } from './core/interceptors/interceptors.component';
-
+import { CoreModule } from './core/core.module';
 import { ComponentsComponent } from './shared/components/components.component';
 import { DirectivesComponent } from './shared/directives/directives.component';
 
-import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ServicesComponent } from './core/services/services.component';
 
-import { FeaturesComponent } from './features/features.component';
 import { GuardsComponent } from './core/guards/guards.component';
 import { ModelsComponent } from './core/models/models.component';
 
@@ -36,6 +33,8 @@ import { RouterModule } from '@angular/router';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { HeaderComponent } from './features/dashboard/header/header.component';
 
 @NgModule({
   declarations: [
@@ -49,17 +48,15 @@ import { FormsModule } from '@angular/forms';
     ComponentsComponent,
     DirectivesComponent,
     PipesComponent,
-    FeaturesComponent,
     HomeComponent,
-    UserProfileComponent,
-    HeaderComponent,
     HomeEmailInputComponent,
-    PrimaryButtonComponent,
     InfoLineComponent,
     QuestionsTableComponent,
     AccordionComponent,
     QuestionComponent,
     FooterComponent,
+    DashboardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +66,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CoreModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
