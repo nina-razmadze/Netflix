@@ -22,8 +22,49 @@
         </div>
     </div>
 </div>
-<app-info-line></app-info-line>
-<app-info-line></app-info-line>
+
+<div class="oval-container bg-black" style="border-bottom: 2px solid rgb(180, 60, 80);">
+</div>
+
+<div class=" bg-black pt-24">
+    <div class="w-[80%] flex justify-start mx-auto ">
+        <h2 class="text-2xl  text-white pb-4 font-bold	">Plan To Suit Your Needs</h2>
+    </div>
+    <div class="w-[80%] flex justify-center mx-auto gap-6  pb-24">
+        <app-subscription-card title="PREMIUM" info=" A cinematic experience with the best picture and audio quality."
+            price="EUR 13.99/month"></app-subscription-card>
+        <app-subscription-card title="STANDARD" info="All the entertainment you love, in Full HD video quality."
+            price="EUR 11.79/month"></app-subscription-card>
+        <app-subscription-card title="BASIC" info="A great way to enjoy all your favorite shows and movies on a budget."
+            price="EUR 9.39/month"></app-subscription-card>
+    </div>
+    <div>
+    </div>
+
+    <div class="w-[80%] flex justify-start mx-auto ">
+        <h2 class="text-2 xl  text-white pb-4 font-bold	">More Reasons to Join</h2>
+    </div>
+    <div class="w-[80%] mx-auto flex justify-center gap-2 pb-24">
+        <app-reasons-card icon="assets/icons/monitor.png" title="Enjoy on your TV"
+            info="Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."></app-reasons-card>
+        <app-reasons-card icon="" title="Download your shows to watch offline"
+            info="Save your favorites easily and always have something to watch."></app-reasons-card>
+        <app-reasons-card icon="" title="Watch everywhere"
+            info="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV."></app-reasons-card>
+        <app-reasons-card icon="" title="Create profiles for kids"
+            info="Send kids on adventures with their favorite characters in a space made just for them — free with your membership."></app-reasons-card>
+    </div>
+</div>
+
+
+
+
+
+
+<app-info-line [rightInfo]="false" imageSrc="assets/Oppenheimer.jpg"></app-info-line>
+<app-info-line [rightInfo]="true" imageSrc="assets/disneyWish.jpg"></app-info-line>
+<app-info-line [rightInfo]="false" imageSrc="assets/marvel.jpg"></app-info-line>
+
 <div class="border-t-8 border-[#1e1e1e] border-b-8 bg-black pb-[60px]">
     <div class="bg-black flex justify-center text-center pb-8 pt-24">
         <h1 class="text-6xl font-bold text-white">Frequently Asked Questions</h1>

@@ -36,12 +36,21 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { HeaderComponent } from './features/dashboard/header/header.component';
 
+import { SubscriptionCardComponent } from './shared/components/cards/subscription-card/subscription-card.component';
+import { ReasonsCardComponent } from './shared/components/cards/reasons-card/reasons-card.component';
+
+import { NgIconsModule } from '@ng-icons/core';
+import { heroUsers } from '@ng-icons/heroicons/outline';
+
+import { bootstrapTvFill } from '@ng-icons/bootstrap-icons';
 @NgModule({
   declarations: [
     AppComponent,
     CoreComponent,
     ServicesComponent,
     GuardsComponent,
+    ReasonsCardComponent,
+    SubscriptionCardComponent,
     InterceptorsComponent,
     ModelsComponent,
     SharedComponent,
@@ -60,6 +69,7 @@ import { HeaderComponent } from './features/dashboard/header/header.component';
   ],
   imports: [
     BrowserModule,
+    NgIconsModule.withIcons({ heroUsers, bootstrapTvFill }),
     AppRoutingModule,
     RouterModule,
     AuthenticationModule,
